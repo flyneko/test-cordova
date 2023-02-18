@@ -1,0 +1,34 @@
+{
+  "App.js": "/webpack/js/App-3f30e9982d0323ef0071.js",
+  "entrypoints": {
+    "App": {
+      "css": [
+        "/webpack/css/vendor-1b36dd7f.chunk.css"
+      ],
+      "js": [
+        "/webpack/js/vendor-05cc22f0d579c2730013.chunk.js",
+        "/webpack/js/App-3f30e9982d0323ef0071.js"
+      ]
+    },
+    "polyfills": {
+      "css": [
+        "/webpack/css/vendor-1b36dd7f.chunk.css"
+      ],
+      "js": [
+        "/webpack/js/vendor-05cc22f0d579c2730013.chunk.js",
+        "/webpack/js/polyfills-c02e60cbe72acbca27c7.js"
+      ]
+    }
+  },
+  "media/images/crazy-santa.png": "/webpack/media/images/crazy-santa-0d8ef8cb.png",
+  "media/images/empty-avatar.png": "/webpack/media/images/empty-avatar-f2fa1fd2.png",
+  "media/images/empty-gift.png": "/webpack/media/images/empty-gift-36aad649.png",
+  "media/images/man.png": "/webpack/media/images/man-5e3edd5a.png",
+  "media/images/santa.png": "/webpack/media/images/santa-09704d2b.png",
+  "media/images/sprite.svg": "/webpack/media/images/sprite-49c1d1ba.svg",
+  "media/images/success.svg": "/webpack/media/images/success-d1f5d08e.svg",
+  "media/images/woman.png": "/webpack/media/images/woman-db59af28.png",
+  "polyfills.js": "/webpack/js/polyfills-c02e60cbe72acbca27c7.js",
+  "vendor.css": "/webpack/css/vendor-1b36dd7f.chunk.css",
+  "vendor.js": "/webpack/js/vendor-05cc22f0d579c2730013.chunk.js"
+}
