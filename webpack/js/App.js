@@ -791,7 +791,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__["createConsumer"])(function () {
-  return "".concat(("https://mysanta-dev.xyz" || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable");
+  return "".concat(("https://vs.mysanta-dev.xyz" || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable");
 }));
 
 /***/ }),
@@ -11866,7 +11866,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (ky__WEBPACK_IMPORTED_MODULE_2__["default"].create({
   timeout: 60 * 1000,
-  prefixUrl: "https://mysanta-dev.xyz" || false,
+  prefixUrl: "https://vs.mysanta-dev.xyz" || false,
   throwHttpErrors: false,
   headers: {
     'Accept': 'application/json',
