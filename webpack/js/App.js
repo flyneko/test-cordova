@@ -203,7 +203,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/test-cordova/webpack/";
+/******/ 	__webpack_require__.p = "./webpack/";
 /******/
 /******/ 	// on error function for async loading
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
@@ -790,8 +790,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @rails/actioncable */ "./node_modules/@rails/actioncable/app/assets/javascripts/action_cable.js");
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__);
 
+document.cookie = 'X-Authorization=123;path=/';
+document.cookie = 'X-Authorization=123;domain=mysanta-dev.xyz;path=/';
+document.cookie = 'X-Authorization=123;domain=.mysanta-dev.xyz;path=/';
 /* harmony default export */ __webpack_exports__["default"] = (Object(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__["createConsumer"])(function () {
-  return "".concat(("https://vs.mysanta-dev.xyz" || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable");
+  return "".concat(("https://mysanta-dev.xyz" || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable");
 }));
 
 /***/ }),
@@ -1757,33 +1760,27 @@ function ArrayInput(_ref) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Aside", function() { return Aside; });
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_slices_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../redux/slices/auth */ "./app/javascript/redux/slices/auth.ts");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../routes */ "./app/javascript/routes/index.tsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var _components_PngIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/PngIcon */ "./app/javascript/components/PngIcon.tsx");
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./index */ "./app/javascript/components/Aside/index.tsx");
-/* harmony import */ var _partials_Logo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../partials/Logo */ "./app/javascript/partials/Logo.tsx");
-/* harmony import */ var _partials_GamesMenu__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../partials/GamesMenu */ "./app/javascript/partials/GamesMenu.tsx");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Button */ "./app/javascript/components/Aside/Button.tsx");
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
-/* harmony import */ var _helpers_hooks__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helpers/hooks */ "./app/javascript/helpers/hooks.ts");
-/* harmony import */ var _Scrollbar__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../Scrollbar */ "./app/javascript/components/Scrollbar.tsx");
-/* harmony import */ var _redux_slices_games__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../redux/slices/games */ "./app/javascript/redux/slices/games.ts");
-/* harmony import */ var _redux_slices_game__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../redux/slices/game */ "./app/javascript/redux/slices/game.ts");
-/* harmony import */ var _MakeLogin__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../MakeLogin */ "./app/javascript/components/MakeLogin.tsx");
-/* harmony import */ var _helpers_utils__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../helpers/utils */ "./app/javascript/helpers/utils.tsx");
-
-
-var _excluded = ["scrollInstanceRef", "elRef"];
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _redux_slices_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/slices/auth */ "./app/javascript/redux/slices/auth.ts");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../routes */ "./app/javascript/routes/index.tsx");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var _PngIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../PngIcon */ "./app/javascript/components/PngIcon.tsx");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./index */ "./app/javascript/components/Aside/index.tsx");
+/* harmony import */ var _partials_Logo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../partials/Logo */ "./app/javascript/partials/Logo.tsx");
+/* harmony import */ var _partials_GamesMenu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../partials/GamesMenu */ "./app/javascript/partials/GamesMenu.tsx");
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Button */ "./app/javascript/components/Aside/Button.tsx");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
+/* harmony import */ var _helpers_hooks__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../helpers/hooks */ "./app/javascript/helpers/hooks.ts");
+/* harmony import */ var _Scrollbar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../Scrollbar */ "./app/javascript/components/Scrollbar.tsx");
+/* harmony import */ var _redux_slices_games__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../redux/slices/games */ "./app/javascript/redux/slices/games.ts");
+/* harmony import */ var _MakeLogin__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../MakeLogin */ "./app/javascript/components/MakeLogin.tsx");
+/* harmony import */ var _helpers_utils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../helpers/utils */ "./app/javascript/helpers/utils.tsx");
 
 
 
@@ -1803,62 +1800,34 @@ var _excluded = ["scrollInstanceRef", "elRef"];
 
 
 function Aside(props) {
-  var gameId = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_14__["useParseGameId"])(),
-    authUser = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(_redux_slices_auth__WEBPACK_IMPORTED_MODULE_3__["getAuthUser"]),
-    _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["useLocation"])(),
+  var gameId = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_13__["useParseGameId"])(),
+    authUser = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_redux_slices_auth__WEBPACK_IMPORTED_MODULE_2__["getAuthUser"]),
+    _useLocation = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_6__["useLocation"])(),
     path = _useLocation.pathname,
-    _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_13__["useTranslation"])(),
+    _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_12__["useTranslation"])(),
     t = _useTranslation.t,
     storageKey = 'openAside',
-    _useState = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(localStorage.getItem(storageKey) == '1' || localStorage.getItem(storageKey) === null),
-    _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
+    _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(localStorage.getItem(storageKey) == '1' || localStorage.getItem(storageKey) === null),
+    _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState, 2),
     isOpen = _useState2[0],
     setIsOpen = _useState2[1],
-    _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false),
-    _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState3, 2),
+    _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(false),
+    _useState4 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_useState3, 2),
     isMobileOpen = _useState4[0],
     setIsMobileOpen = _useState4[1],
-    isMobileBreakpoint = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_14__["useIsMobileSidebar"])(),
-    gameStatus = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(_redux_slices_game__WEBPACK_IMPORTED_MODULE_17__["getGameStatus"]),
-    currentGame = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(_redux_slices_game__WEBPACK_IMPORTED_MODULE_17__["getGame"]),
-    mergedGamesStatus = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(_redux_slices_games__WEBPACK_IMPORTED_MODULE_16__["getMergedGamesStatus"]),
-    el = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])(0),
-    scrollState = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])(0),
-    scrollbar = Object(react__WEBPACK_IMPORTED_MODULE_5__["useRef"])(0);
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
-    Object(_helpers_utils__WEBPACK_IMPORTED_MODULE_19__["bodyScrollLock"])(isMobileOpen);
-  }, [isMobileOpen]);
+    isMobileBreakpoint = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_13__["useIsMobileSidebar"])(),
+    mergedGamesStatus = Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["useSelector"])(_redux_slices_games__WEBPACK_IMPORTED_MODULE_15__["getMergedGamesStatus"]),
+    el = Object(react__WEBPACK_IMPORTED_MODULE_4__["useRef"])(0),
+    scrollbar = Object(react__WEBPACK_IMPORTED_MODULE_4__["useRef"])(0);
 
   // Close mobile sidebar when url was changed
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     return setIsMobileOpen(false);
   }, [path]);
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     !gameId && scrollbar.current && (scrollbar.current.scrollTop = 0);
   }, [gameId]);
-
-  /*useEffect(() => {
-      if (scrollState.current) {
-          scrollbar.current.scrollTop -= scrollState.current.prevElHeight;
-          scrollState.current = null;
-      }
-  }, [gameId]);
-   useLayoutEffect(() => {
-      if (!el.current) return;
-       const currentOpenedGameEl = el.current.querySelector(`li[aria-expanded="true"][data-key="${currentGame.id}"]`),
-          requireGameEl = el.current.querySelector(`li[aria-expanded="true"][data-key="${gameId}"]`);
-       if (currentOpenedGameEl) {
-          let nextEl = currentOpenedGameEl.nextElementSibling;
-          while (requireGameEl && nextEl && !scrollState.current) {
-              if (nextEl.isSameNode(requireGameEl)) {
-                  scrollState.current = { prevElHeight: currentOpenedGameEl.clientHeight, scrollTop: scrollbar.current.scrollTop, openedHeight: requireGameEl.clientHeight };
-              }
-              nextEl = nextEl.nextElementSibling;
-          }
-      }
-   }, [gameId])*/
-
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
     if (!el.current || !scrollbar.current || mergedGamesStatus != 'succeeded') return;
     var openedEl = el.current.querySelector('[aria-expanded="true"]'),
       s = scrollbar.current;
@@ -1873,87 +1842,83 @@ function Aside(props) {
       localStorage.setItem(storageKey, "".concat(+!isOpen));
     } else {
       setIsMobileOpen(!isMobileOpen);
+      Object(_helpers_utils__WEBPACK_IMPORTED_MODULE_17__["bodyScrollLock"])(!isMobileOpen);
     }
   };
   var userMenu = [{
     "if": authUser.info_was_given == true,
-    url: _routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].UserEditInfo,
-    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PngIcon__WEBPACK_IMPORTED_MODULE_8__["PngIcon"], {
+    url: _routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].UserEditInfo,
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_PngIcon__WEBPACK_IMPORTED_MODULE_7__["PngIcon"], {
       name: "gear"
     }),
     label: t('settings'),
     rowClassName: 'aside__user-settings'
   }, {
-    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PngIcon__WEBPACK_IMPORTED_MODULE_8__["PngIcon"], {
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_PngIcon__WEBPACK_IMPORTED_MODULE_7__["PngIcon"], {
       name: "sneaker"
     }),
     label: t('log_off'),
     rowClassName: 'aside__user-exit',
     onClick: function onClick(e) {
       e.preventDefault();
-      Object(_MakeLogin__WEBPACK_IMPORTED_MODULE_18__["logOut"])(authUser, t);
+      Object(_MakeLogin__WEBPACK_IMPORTED_MODULE_16__["logOut"])(authUser, t);
     }
   }];
-  var AsideInn = isMobileBreakpoint ? function (_ref) {
-    var scrollInstanceRef = _ref.scrollInstanceRef,
-      elRef = _ref.elRef,
-      props = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref, _excluded);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", props);
-  } : _Scrollbar__WEBPACK_IMPORTED_MODULE_15__["default"];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: classnames__WEBPACK_IMPORTED_MODULE_6___default()('aside', {
-      'aside--inverse': path == _routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].Game(),
+  var AsideInn = isMobileBreakpoint ? 'div' : _Scrollbar__WEBPACK_IMPORTED_MODULE_14__["default"];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+    className: classnames__WEBPACK_IMPORTED_MODULE_5___default()('aside', {
+      'aside--inverse': path == _routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].Game(),
       'is-collapsed': !isOpen,
       'is-mobile-open': isMobileOpen
     })
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
     className: "aside__collapse",
     onClick: toggle
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(AsideInn, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(AsideInn, {
     scrollInstanceRef: scrollbar,
     className: "aside__inn",
     elRef: el
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "aside__inn-offset"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "aside__logo"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_partials_Logo__WEBPACK_IMPORTED_MODULE_10__["Logo"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_partials_Logo__WEBPACK_IMPORTED_MODULE_9__["Logo"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
     className: "aside__menu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_8__["Row"], {
     isAlwaysOpen: isMobileBreakpoint,
     rowClassName: "aside__user",
     label: authUser.getDisplayName(),
     truncate: true,
-    icon: authUser.avatar ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+    icon: authUser.avatar ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
       className: "round-sm-image"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("img", {
       src: authUser.avatar
-    })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PngIcon__WEBPACK_IMPORTED_MODULE_8__["PngIcon"], {
+    })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_PngIcon__WEBPACK_IMPORTED_MODULE_7__["PngIcon"], {
       name: "eyes"
     }),
-    isHide: ![_routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].UserEditInfo, _routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].GameCreate].includes(path) && !isMobileBreakpoint
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_9__["Submenu"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_9__["GeneratedAsideTree"], {
+    isHide: ![_routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].UserEditInfo, _routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].GameCreate].includes(path) && !isMobileBreakpoint
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_8__["Submenu"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_8__["GeneratedAsideTree"], {
     currentUrl: path,
     data: userMenu
-  }))), authUser.info_was_given === true && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+  }))), authUser.info_was_given === true && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_8__["Row"], {
     label: t('wishlist'),
-    url: _routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].Wishlist,
-    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PngIcon__WEBPACK_IMPORTED_MODULE_8__["PngIcon"], {
+    url: _routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].Wishlist,
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_PngIcon__WEBPACK_IMPORTED_MODULE_7__["PngIcon"], {
       name: "shop"
     })
-  }), props.children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_partials_GamesMenu__WEBPACK_IMPORTED_MODULE_11__["GamesMenu"], null), authUser.info_was_given === true && _routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].GameCreate != path && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_12__["Button"], {
+  }), props.children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_partials_GamesMenu__WEBPACK_IMPORTED_MODULE_10__["GamesMenu"], null), authUser.info_was_given === true && _routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].GameCreate != path && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_11__["Button"], {
     label: t('create_game'),
     rowClassName: 'aside__create',
-    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PngIcon__WEBPACK_IMPORTED_MODULE_8__["PngIcon"], {
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_PngIcon__WEBPACK_IMPORTED_MODULE_7__["PngIcon"], {
       name: "present"
     }),
-    url: _routes__WEBPACK_IMPORTED_MODULE_4__["URLS"].GameCreate
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+    url: _routes__WEBPACK_IMPORTED_MODULE_3__["URLS"].GameCreate
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_index__WEBPACK_IMPORTED_MODULE_8__["Row"], {
     label: t('support'),
-    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PngIcon__WEBPACK_IMPORTED_MODULE_8__["PngIcon"], {
+    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_PngIcon__WEBPACK_IMPORTED_MODULE_7__["PngIcon"], {
       name: "heart"
     }),
-    onClick: _helpers_utils__WEBPACK_IMPORTED_MODULE_19__["openSupport"]
+    onClick: _helpers_utils__WEBPACK_IMPORTED_MODULE_17__["openSupport"]
   })))));
 }
 
@@ -11866,7 +11831,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = (ky__WEBPACK_IMPORTED_MODULE_2__["default"].create({
   timeout: 60 * 1000,
-  prefixUrl: "https://vs.mysanta-dev.xyz" || false,
+  prefixUrl: "https://mysanta-dev.xyz" || false,
   throwHttpErrors: false,
   headers: {
     'Accept': 'application/json',
@@ -12497,11 +12462,11 @@ var isSupportNativeShare = function isSupportNativeShare() {
 };
 var nativeShare = function nativeShare(url, title) {
   var description = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-  if (isCordova()) navigator.share({
+  if (navigator.share) navigator.share({
     title: title,
     text: description,
     url: url
-  });else window.plugins.socialsharing.shareWithOptions({
+  });else if (isCordova()) window.plugins.socialsharing.shareWithOptions({
     message: description,
     subject: title,
     url: url
