@@ -790,11 +790,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @rails/actioncable */ "./node_modules/@rails/actioncable/app/assets/javascripts/action_cable.js");
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__);
 
-document.cookie = 'X-Authorization=123;path=/';
-document.cookie = 'X-Authorization=123;domain=vs.mysanta-dev.xyz;path=/';
-document.cookie = 'X-Authorization=123;domain=.vs.mysanta-dev.xyz;path=/';
 /* harmony default export */ __webpack_exports__["default"] = (Object(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__["createConsumer"])(function () {
-  return "".concat(("https://vs.mysanta-dev.xyz" || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable");
+  return "".concat(("https://vs.mysanta-dev.xyz" || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable?token=").concat(localStorage.getItem('auth_token'));
 }));
 
 /***/ }),
