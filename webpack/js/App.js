@@ -752,10 +752,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @rails/actioncable */ "./node_modules/@rails/actioncable/app/assets/javascripts/action_cable.js");
 /* harmony import */ var _rails_actioncable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _helpers_initialState__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../helpers/initialState */ "./app/javascript/helpers/initialState.ts");
+/* harmony import */ var _core_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/auth */ "./app/javascript/core/auth.tsx");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_rails_actioncable__WEBPACK_IMPORTED_MODULE_0__["createConsumer"])(function () {
-  return "".concat(("https://mysanta-dev.xyz/" || false || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable");
+  var token = Object(_core_auth__WEBPACK_IMPORTED_MODULE_2__["getAuthToken"])();
+  return "".concat(("https://mysanta-dev.xyz/" || false || false).replace(/https*/, 'wss').replace(/\/$/, ''), "/cable?token=").concat(token);
 }));
 
 /***/ }),
@@ -10467,11 +10470,13 @@ var UsersInGame = /*#__PURE__*/function () {
 /*!**************************************!*\
   !*** ./app/javascript/core/auth.tsx ***!
   \**************************************/
-/*! exports provided: EmailInput, useAuth */
+/*! exports provided: setAuthToken, getAuthToken, EmailInput, useAuth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setAuthToken", function() { return setAuthToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAuthToken", function() { return getAuthToken; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmailInput", function() { return EmailInput; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useAuth", function() { return useAuth; });
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/asyncToGenerator.js");
@@ -10521,6 +10526,12 @@ var _excluded = ["name"];
 
 
 
+function setAuthToken(token) {
+  if (token === null) localStorage.removeItem('auth_token');else localStorage.setItem('auth_token', token);
+}
+function getAuthToken() {
+  return localStorage.getItem('auth_token');
+}
 function EmailInput(_ref) {
   var name = _ref.name,
     inputProps = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2___default()(_ref, _excluded);
@@ -10613,7 +10624,7 @@ function useAuth() {
         navigate(_routes__WEBPACK_IMPORTED_MODULE_10__["URLS"].AuthLogin);
         js_cookie__WEBPACK_IMPORTED_MODULE_14___default.a.remove(_redux_slices_auth__WEBPACK_IMPORTED_MODULE_8__["tempGameIdCookieName"]);
         localStorage.setItem('logout_time', Object(_helpers_utils__WEBPACK_IMPORTED_MODULE_9__["getTimestamp"])().toString());
-        localStorage.removeItem('auth_token');
+        setAuthToken(null);
       });
     });
   };
@@ -12264,6 +12275,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ky */ "./node_modules/ky/distribution/index.js");
 /* harmony import */ var _toastify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./toastify */ "./app/javascript/helpers/toastify.tsx");
 /* harmony import */ var _initialState__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./initialState */ "./app/javascript/helpers/initialState.ts");
+/* harmony import */ var _core_auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core/auth */ "./app/javascript/core/auth.tsx");
+
 
 
 
@@ -12277,6 +12290,10 @@ __webpack_require__.r(__webpack_exports__);
     'Accept': 'application/json'
   },
   hooks: {
+    beforeRequest: [function (request) {
+      var authToken = Object(_core_auth__WEBPACK_IMPORTED_MODULE_5__["getAuthToken"])();
+      authToken && request.headers.set('Authorization', authToken);
+    }],
     afterResponse: [/*#__PURE__*/function () {
       var _ref = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(_request, _options, response) {
         var jsonResponse, errorResponse;
@@ -12288,7 +12305,7 @@ __webpack_require__.r(__webpack_exports__);
                 return response.json()["catch"](function () {});
               case 2:
                 jsonResponse = _context.sent;
-                if (jsonResponse && jsonResponse.mobile_authentication_token) localStorage.setItem('auth_token', jsonResponse.mobile_authentication_token);
+                if (jsonResponse && jsonResponse.mobile_authentication_token) Object(_core_auth__WEBPACK_IMPORTED_MODULE_5__["setAuthToken"])(jsonResponse.mobile_authentication_token);
                 if (!(!response.ok && response.status != 404)) {
                   _context.next = 11;
                   break;

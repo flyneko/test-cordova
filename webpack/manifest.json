@@ -1,5 +1,5 @@
 {
-  "App.js": "/webpack/js/App-11c02bb908fc3dbbd8ef.js",
+  "App.js": "/webpack/js/App-7a4c8cfaa1c59e223f97.js",
   "entrypoints": {
     "App": {
       "css": [
@@ -7,7 +7,7 @@
       ],
       "js": [
         "/webpack/js/vendor-b6d9e4b8a6f53035443d.chunk.js",
-        "/webpack/js/App-11c02bb908fc3dbbd8ef.js"
+        "/webpack/js/App-7a4c8cfaa1c59e223f97.js"
       ]
     },
     "polyfills": {
