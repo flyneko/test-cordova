@@ -1,22 +1,22 @@
 {
-  "App.js": "/webpack/js/App-b8caf093d180d026bfdd.js",
+  "App.js": "/webpack/js/App-11c02bb908fc3dbbd8ef.js",
   "entrypoints": {
     "App": {
       "css": [
-        "/webpack/css/vendor-1b36dd7f.chunk.css"
+        "/webpack/css/vendor-9c5f57e3.chunk.css"
       ],
       "js": [
-        "/webpack/js/vendor-05cc22f0d579c2730013.chunk.js",
-        "/webpack/js/App-b8caf093d180d026bfdd.js"
+        "/webpack/js/vendor-b6d9e4b8a6f53035443d.chunk.js",
+        "/webpack/js/App-11c02bb908fc3dbbd8ef.js"
       ]
     },
     "polyfills": {
       "css": [
-        "/webpack/css/vendor-1b36dd7f.chunk.css"
+        "/webpack/css/vendor-9c5f57e3.chunk.css"
       ],
       "js": [
-        "/webpack/js/vendor-05cc22f0d579c2730013.chunk.js",
-        "/webpack/js/polyfills-4d654b85df33defbdc91.js"
+        "/webpack/js/vendor-b6d9e4b8a6f53035443d.chunk.js",
+        "/webpack/js/polyfills-c02e60cbe72acbca27c7.js"
       ]
     }
   },
@@ -28,7 +28,7 @@
   "media/images/sprite.svg": "/webpack/media/images/sprite-49c1d1ba.svg",
   "media/images/success.svg": "/webpack/media/images/success-d1f5d08e.svg",
   "media/images/woman.png": "/webpack/media/images/woman-db59af28.png",
-  "polyfills.js": "/webpack/js/polyfills-4d654b85df33defbdc91.js",
-  "vendor.css": "/webpack/css/vendor-1b36dd7f.chunk.css",
-  "vendor.js": "/webpack/js/vendor-05cc22f0d579c2730013.chunk.js"
+  "polyfills.js": "/webpack/js/polyfills-c02e60cbe72acbca27c7.js",
+  "vendor.css": "/webpack/css/vendor-9c5f57e3.chunk.css",
+  "vendor.js": "/webpack/js/vendor-b6d9e4b8a6f53035443d.chunk.js"
 }
