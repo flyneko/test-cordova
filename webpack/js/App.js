@@ -69,7 +69,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + "-" + {"0":"13cf6123baedf0f97b2a","1":"40688e2324b668d1103b","2":"90fecf841a67e69cf74d","3":"967a097bba1e0481031c","4":"ec0a174403771903129a","5":"0fc6a227f3f8c96ad02b","6":"4291860ad8895404a044","7":"3b21a1dec29003dc5ff0","8":"b0a58b35475aa6d1ba5a","9":"c418313ceea79d8c76b3","10":"9a57ff23f5ff8742782b","11":"7d4cc4d244ea7a77ca37","12":"ff6ee3d1a6409e9853c3","13":"08c10ad22ad2f9d3270d","14":"d05845014635b25474e7","15":"a46dee9ef9d3b0f1f408","16":"0968c2597a7afec95d49","17":"10eb4284b5a189f523ff","18":"592107c99127fa1daa19","19":"a9d8ce374154d009c87f","20":"51d265f5786d5b341d96","21":"f056a6a8e5f22b17fa12","22":"a21f76235ee3d8422b08","23":"194489812a8ade7924f9","24":"df8c4ec92d6e4ac95d9e","25":"8e5451f36de278da4db1","26":"bd28c9bdf25f13ce7a94","27":"4be998d9f1568b0b90e7","28":"c4792649d661c39bcda2","29":"8583105ca309e826663f","30":"9eed2065348036d8adc7","31":"d5fc6eca6e656dbc86b9","32":"2601705e5986b5f1d173","33":"1c75f95d05e301a6ebe1","34":"75facda0e7bf46011ef3","35":"91ecd4f113fba4fbe85e","36":"2a37b4d1dba9e6d5f917","37":"323162fb575d72f6f1ca","38":"1c551f50147489d75142","39":"e970bc2be730dbff3f6c","40":"3902dbdb077f5af67795","41":"9542166a311fd315722c","42":"dfd6040e583e0c689787","43":"fb9afc99120724228ac3","44":"e7393f890636b802db77","45":"ab45a7631e7e92244d40"}[chunkId] + ".chunk.js"
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + "-" + {"0":"13cf6123baedf0f97b2a","1":"40688e2324b668d1103b","2":"90fecf841a67e69cf74d","3":"967a097bba1e0481031c","4":"ec0a174403771903129a","5":"0fc6a227f3f8c96ad02b","6":"4291860ad8895404a044","7":"3b21a1dec29003dc5ff0","8":"b0a58b35475aa6d1ba5a","9":"c418313ceea79d8c76b3","10":"9a57ff23f5ff8742782b","11":"7d4cc4d244ea7a77ca37","12":"ff6ee3d1a6409e9853c3","13":"08c10ad22ad2f9d3270d","14":"d05845014635b25474e7","15":"a46dee9ef9d3b0f1f408","16":"0968c2597a7afec95d49","17":"10eb4284b5a189f523ff","18":"592107c99127fa1daa19","19":"a9d8ce374154d009c87f","20":"51d265f5786d5b341d96","21":"656cf6c83544656a1f00","22":"a21f76235ee3d8422b08","23":"128eeb88a5cbe5ea7d3b","24":"df8c4ec92d6e4ac95d9e","25":"8e5451f36de278da4db1","26":"bd28c9bdf25f13ce7a94","27":"4be998d9f1568b0b90e7","28":"c4792649d661c39bcda2","29":"8583105ca309e826663f","30":"9eed2065348036d8adc7","31":"d5fc6eca6e656dbc86b9","32":"2601705e5986b5f1d173","33":"1c75f95d05e301a6ebe1","34":"75facda0e7bf46011ef3","35":"91ecd4f113fba4fbe85e","36":"2a37b4d1dba9e6d5f917","37":"323162fb575d72f6f1ca","38":"1c551f50147489d75142","39":"e970bc2be730dbff3f6c","40":"3902dbdb077f5af67795","41":"9542166a311fd315722c","42":"dfd6040e583e0c689787","43":"fb9afc99120724228ac3","44":"e7393f890636b802db77","45":"ab45a7631e7e92244d40"}[chunkId] + ".chunk.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -4597,6 +4597,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_i18n__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../core/i18n */ "./app/javascript/core/i18n.tsx");
 /* harmony import */ var _helpers_hooks__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../helpers/hooks */ "./app/javascript/helpers/hooks.ts");
 /* harmony import */ var _Masks_DateMask__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Masks/DateMask */ "./app/javascript/components/Input/Masks/DateMask.ts");
+/* harmony import */ var _Placeholder__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../Placeholder */ "./app/javascript/components/Placeholder.tsx");
 
 
 
@@ -4618,12 +4619,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
+
 function InputPlaceholder() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__["createElement"]("div", {
-    style: {
-      border: 0
-    },
-    className: "input ph-item"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4__["createElement"](_Placeholder__WEBPACK_IMPORTED_MODULE_16__["Placeholder"], {
+    className: "input"
   });
 }
 function InputBoilerplate(_ref) {
@@ -5485,6 +5484,42 @@ function PhotoUpload(_ref) {
     }, meta.error)), children && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       className: "photo-upload__info"
     }, children));
+  });
+}
+
+/***/ }),
+
+/***/ "./app/javascript/components/Placeholder.tsx":
+/*!***************************************************!*\
+  !*** ./app/javascript/components/Placeholder.tsx ***!
+  \***************************************************/
+/*! exports provided: Placeholder */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Placeholder", function() { return Placeholder; });
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js");
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+
+var _excluded = ["style", "className"];
+
+
+function Placeholder(_ref) {
+  var style = _ref.style,
+    className = _ref.className,
+    props = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default()(_ref, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    style: style,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()('ph-item', className, {
+      'ph-item--no-animation': props.noAnimation,
+      'ph-item--round': props.round,
+      'ph-item--text': props.text
+    })
   });
 }
 
@@ -7240,6 +7275,7 @@ function RegisterForm(_ref) {
                     setError(errorMessage);
                   } else {
                     onRegister && onRegister();
+                    alert(JSON.stringify(response));
                     login(onLogin);
                   }
                 case 1:
@@ -7771,6 +7807,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../core/api */ "./app/javascript/core/api/index.ts");
 /* harmony import */ var _SocialButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SocialButton */ "./app/javascript/components/SocialAuth/SocialButton.tsx");
 /* harmony import */ var _helpers_initialState__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../helpers/initialState */ "./app/javascript/helpers/initialState.ts");
+/* harmony import */ var _Placeholder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Placeholder */ "./app/javascript/components/Placeholder.tsx");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
 
 
 
@@ -7781,11 +7819,21 @@ var _excluded = ["onAuth"];
 
 
 
+
+
 function GoogleAuth(_ref) {
   var onAuth = _ref.onAuth,
     props = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2___default()(_ref, _excluded);
   var el = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(),
+    _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_10__["useTranslation"])(),
+    t = _useTranslation.t,
     isMobile = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_4__["useIsMobile"])(),
+    _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Placeholder__WEBPACK_IMPORTED_MODULE_9__["Placeholder"], {
+      className: "social-btn"
+    })),
+    _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
+    customElement = _useState2[0],
+    setCustomElement = _useState2[1],
     _useApi = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_4__["useApi"])(_core_api__WEBPACK_IMPORTED_MODULE_6__["Api"].users.googleAuth),
     googleAuthRequest = _useApi.request,
     _useWindowDimensions = Object(_helpers_hooks__WEBPACK_IMPORTED_MODULE_4__["useWindowDimensions"])(),
@@ -7805,6 +7853,12 @@ function GoogleAuth(_ref) {
   var onRender = function onRender() {
     Object(_helpers_utils__WEBPACK_IMPORTED_MODULE_5__["importExternal"])('https://accounts.google.com/gsi/client').then(function () {
       var isRecentlyLogout = Object(_helpers_utils__WEBPACK_IMPORTED_MODULE_5__["getTimestamp"])() - parseInt(localStorage.getItem('logout_time')) < 20;
+      setCustomElement( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+        style: {
+          border: 0
+        },
+        ref: el
+      }));
       google.accounts.id.initialize({
         width: '100%',
         auto_select: !isRecentlyLogout,
@@ -7817,6 +7871,8 @@ function GoogleAuth(_ref) {
       });
       !isMobile && !isRecentlyLogout && google.accounts.id.prompt();
       renderButton();
+    })["catch"](function () {
+      return setCustomElement(null);
     });
   };
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(function () {
@@ -7824,10 +7880,9 @@ function GoogleAuth(_ref) {
   }, [windowWidth]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_SocialButton__WEBPACK_IMPORTED_MODULE_7__["SocialButton"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, props, {
     socialName: "google",
+    label: t('login_via_google'),
     onRender: onRender,
-    customElement: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      ref: el
-    }),
+    customElement: customElement,
     showCondition: !!_helpers_initialState__WEBPACK_IMPORTED_MODULE_8__["initialState"].googgle_client_id
   }));
 }
@@ -7851,19 +7906,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers_initialState__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../helpers/initialState */ "./app/javascript/helpers/initialState.ts");
 /* harmony import */ var _helpers_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../helpers/utils */ "./app/javascript/helpers/utils.tsx");
 /* harmony import */ var _SocialButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SocialButton */ "./app/javascript/components/SocialAuth/SocialButton.tsx");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
+
 
 
 
 
 
 function MailRuAuth(props) {
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_5__["useTranslation"])(),
+    t = _useTranslation.t;
   var start = function start() {
     window.location.href = "https://oauth.mail.ru/login?client_id=".concat(_helpers_initialState__WEBPACK_IMPORTED_MODULE_2__["initialState"].mailru_client_id, "&response_type=code&scope=userinfo&redirect_uri=").concat(Object(_helpers_utils__WEBPACK_IMPORTED_MODULE_3__["url"])('users/auth/mail_ru/callback'), "&state=33bc0cac-f436-3ad8-ac5f-b65d908f8827");
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_SocialButton__WEBPACK_IMPORTED_MODULE_4__["SocialButton"], _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, props, {
     socialName: "mail",
     onClick: start,
-    label: "\u0412\u043E\u0439\u0442\u0438 \u0441 Mail.ru",
+    label: t('login_via_mail'),
     showCondition: !!_helpers_initialState__WEBPACK_IMPORTED_MODULE_2__["initialState"].mailru_client_id
   }));
 }
@@ -7946,10 +8005,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SocialButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SocialButton */ "./app/javascript/components/SocialAuth/SocialButton.tsx");
 /* harmony import */ var _helpers_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../helpers/utils */ "./app/javascript/helpers/utils.tsx");
 /* harmony import */ var _core_auth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../core/auth */ "./app/javascript/core/auth.tsx");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
 
 
 
 var _excluded = ["onAuth"];
+
 
 
 
@@ -7986,7 +8047,9 @@ function TelegramCatchCallbackData(_ref) {
 function TelegramAuth(_ref2) {
   var onAuth = _ref2.onAuth,
     props = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2___default()(_ref2, _excluded);
-  var popup = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(0),
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_10__["useTranslation"])(),
+    t = _useTranslation.t,
+    popup = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(0),
     _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
     _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
     isLoading = _useState2[0],
@@ -8041,7 +8104,7 @@ function TelegramAuth(_ref2) {
     isLoading: isLoading,
     socialName: "telegram",
     onClick: start,
-    label: "\u0412\u043E\u0439\u0442\u0438 \u0447\u0435\u0440\u0435\u0437 Telegram",
+    label: t('login_via_telegram'),
     showCondition: !!_helpers_initialState__WEBPACK_IMPORTED_MODULE_6__["initialState"].telegram_auth_bot_id
   })));
 }
@@ -8075,10 +8138,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ky__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ky */ "./node_modules/ky/distribution/index.js");
 /* harmony import */ var _SocialButton__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SocialButton */ "./app/javascript/components/SocialAuth/SocialButton.tsx");
 /* harmony import */ var _core_auth__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../core/auth */ "./app/javascript/core/auth.tsx");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
 
 
 
 var _excluded = ["onAuth"];
+
 
 
 
@@ -8128,7 +8193,9 @@ function YandexCatchToken() {
 function YandexAuth(_ref) {
   var onAuth = _ref.onAuth,
     props = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2___default()(_ref, _excluded);
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_12__["useTranslation"])(),
+    t = _useTranslation.t,
+    _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
     _useState2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default()(_useState, 2),
     isLoading = _useState2[0],
     setIsLoading = _useState2[1],
@@ -8167,7 +8234,7 @@ function YandexAuth(_ref) {
     isLoading: isLoading,
     socialName: "yandex",
     onClick: start,
-    label: "\u0412\u043E\u0439\u0442\u0438 \u0441 \u042F\u043D\u0434\u0435\u043A\u0441 ID",
+    label: t('login_via_yandex'),
     showCondition: !!_helpers_initialState__WEBPACK_IMPORTED_MODULE_7__["initialState"].yandex_client_id
   }));
 }
@@ -12702,9 +12769,7 @@ var importExternal = function importExternal(url) {
       var script = document.createElement('script');
       script.src = url;
       script.async = true;
-      script.onload = function () {
-        return resolve();
-      };
+      script.onload = resolve;
       script.onerror = reject;
       script.id = scriptId;
       document.body.appendChild(script);
@@ -23222,7 +23287,6 @@ var URLS = {
   Terms: '/terms',
   YandexCatchToken: '/yandex_catch_token'
 };
-
 function AppRoutes(_ref) {
   var children = _ref.children;
   var isAuth = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(_redux_slices_auth__WEBPACK_IMPORTED_MODULE_4__["isLogged"]),
